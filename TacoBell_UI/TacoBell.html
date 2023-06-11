@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style>
+	
+	@font-face {
+		font-family: 'Font-Bold';
+		src: url('fonts/Brandon_blk.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+		font-family: 'Font-Regular';
+		src: url('fonts/Brandon_med.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+
+	
+	
+	* {
+		box-sizing: border-box;
+		margin: 0;
+  		padding: 0;
+	}
+	
+	body{
+		margin: 0;
+		padding:0;
+		background-color: transperent;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		font-size:1vw;
+		background: url(images/eee1.jpg) no-repeat;
+		background-size:cover;	
+	}	
+	
+	.background{
+		width:100%;
+		height:56.3em;
+		background: # ;
+	}	
+	
+	.red {background: #D73276;}
+	.grey {background: #dad6ce;}
+	.black {background: #2D1A45}
+	
+	.upper {text-transform: uppercase;}
+		
+		
+	
+	.header {
+		width: 100%;  
+		height: 10.8em;
+		background-image: url(images/Logo-top.svg), linear-gradient(#75247E, #9C2E73);
+	}
+	
+	.middle {
+		overflow: hidden;
+		width: 100%;  
+		height: 30.7em;
+		border-bottom: 0.5em solid #FFFFFF;
+		padding-right: 0.5em;
+    	padding-left: 0.5em;
+		background: #;
+	}
+	
+	.footer {
+		position: relative;
+		width: 100%;  
+		height: 11em;
+        background-image: linear-gradient(#75247E, #9C2E73);
+	}
+	
+	.footer-text {
+		position: absolute;
+  		top: 37%;
+		margin: 0 4.1em;
+		font-family: 'Font-Regular';
+		background: ;
+		}
+	
+	.number-animation {
+		display: inline-block;
+		text-align: center;
+		width: 1.7em;
+		height: 100%;		
+		padding:  0.2em 0;
+		font-size: 1.8em;
+		color: #BB2487;
+		background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' fill='%23F9D5EC'/><circle cx='50' cy='50' r='41' fill='%23BB2487'/><circle cx='50' cy='50' r='30' fill='%23F2F0F2'/></svg>");
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background: ;
+	}
+	
+	.text-animation {
+		display: inline-block;
+		width: 40em;
+		height: 100%;		
+		padding: 0em 0 0 0.2em;
+		font-size: 1.8em;
+		color: #F2F2F2;
+		background: ;
+	}
+
+	
+	
+	.navContainer {
+		width: 100%;
+		background-size: 80%;	
+	  	background:#;
+	}	
+    
+	#alphabet {
+		width: 100%;
+		padding-left: 4.0em;
+		height: 3.9em;
+  		list-style-type: none;
+    	background: #;
+	}
+	
+	#alphabet li {
+  		width: 3.56em;
+    	padding: 0;
+    	float: left;
+  		-webkit-transition: 0.5s ease;
+  		cursor: pointer;
+    	background: #;
+	}
+		
+	#alphabet a {
+		text-align:center; 
+		display: inline-block;
+	  	width: 100%;
+		height:100%;
+	  	padding: .44em 0 .2em 0;
+		font-family: 'Font-Bold';
+		font-size: 1.8em;
+	  	text-decoration: none;
+	  	color: #FFFFFF;
+		background:#;
+	}	
+		
+	.alphabetBackground { 
+  		position: absolute;
+		width: 99.0em;
+		height: 2.8em;
+		margin:0 .5em;
+  		top: 11.4em;
+		background: #D091D2;
+		z-index: -2;
+	}
+	
+	.underbar {
+  		position: absolute;
+  		height: 4em;
+  		top: 10.8em;
+		background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 45 44' xmlns='http://www.w3.org/2000/svg'><polygon points='45 36 22.5 43 0 36 0 3 45 3' fill='%23D73276' /></svg>");
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: auto 100%;	
+  		-webkit-transition: 0.5s ease;
+		z-index: -1;
+	}
+	
+	li:nth-of-type(1):hover ~ .underbar, li:nth-of-type(1):focus ~ .underbar, li:nth-of-type(1):active ~ .underbar { left: 4em; }
+	li:nth-of-type(2):hover ~ .underbar, li:nth-of-type(2):focus ~ .underbar, li:nth-of-type(2):active ~ .underbar { left: calc(4em + 1*3.56em); }
+	li:nth-of-type(3):hover ~ .underbar, li:nth-of-type(3):focus ~ .underbar, li:nth-of-type(3):active ~ .underbar { left: calc(4em + 2*3.56em); }
+	li:nth-of-type(4):hover ~ .underbar, li:nth-of-type(4):focus ~ .underbar, li:nth-of-type(4):active ~ .underbar { left: calc(4em + 3*3.56em); }
+	li:nth-of-type(5):hover ~ .underbar, li:nth-of-type(5):focus ~ .underbar, li:nth-of-type(5):active ~ .underbar { left: calc(4em + 4*3.56em); }
+	li:nth-of-type(6):hover ~ .underbar, li:nth-of-type(6):focus ~ .underbar, li:nth-of-type(6):active ~ .underbar { left: calc(4em + 5*3.56em); }
+	li:nth-of-type(7):hover ~ .underbar, li:nth-of-type(7):focus ~ .underbar, li:nth-of-type(7):active ~ .underbar { left: calc(4em + 6*3.56em); }
+	li:nth-of-type(8):hover ~ .underbar, li:nth-of-type(8):focus ~ .underbar, li:nth-of-type(8):active ~ .underbar { left: calc(4em + 7*3.56em); }
+	li:nth-of-type(9):hover ~ .underbar, li:nth-of-type(9):focus ~ .underbar, li:nth-of-type(9):active ~ .underbar { left: calc(4em + 8*3.56em); }
+	li:nth-of-type(10):hover ~ .underbar, li:nth-of-type(10):focus ~ .underbar, li:nth-of-type(10):active ~ .underbar { left: calc(4em + 9*3.56em); }
+	li:nth-of-type(11):hover ~ .underbar, li:nth-of-type(11):focus ~ .underbar, li:nth-of-type(11):active ~ .underbar { left: calc(4em + 10*3.56em); }
+	li:nth-of-type(12):hover ~ .underbar, li:nth-of-type(12):focus ~ .underbar, li:nth-of-type(12):active ~ .underbar { left: calc(4em + 11*3.56em); }
+	li:nth-of-type(13):hover ~ .underbar, li:nth-of-type(13):focus ~ .underbar, li:nth-of-type(13):active ~ .underbar { left: calc(4em + 12*3.56em); }
+	li:nth-of-type(14):hover ~ .underbar, li:nth-of-type(14):focus ~ .underbar, li:nth-of-type(14):active ~ .underbar { left: calc(4em + 13*3.56em); }
+	li:nth-of-type(15):hover ~ .underbar, li:nth-of-type(15):focus ~ .underbar, li:nth-of-type(15):active ~ .underbar { left: calc(4em + 14*3.56em); }
+	li:nth-of-type(16):hover ~ .underbar, li:nth-of-type(16):focus ~ .underbar, li:nth-of-type(16):active ~ .underbar { left: calc(4em + 15*3.56em); }
+	li:nth-of-type(17):hover ~ .underbar, li:nth-of-type(17):focus ~ .underbar, li:nth-of-type(17):active ~ .underbar { left: calc(4em + 16*3.56em); }
+	li:nth-of-type(18):hover ~ .underbar, li:nth-of-type(18):focus ~ .underbar, li:nth-of-type(18):active ~ .underbar { left: calc(4em + 17*3.56em); }
+	li:nth-of-type(19):hover ~ .underbar, li:nth-of-type(19):focus ~ .underbar, li:nth-of-type(19):active ~ .underbar { left: calc(4em + 18*3.56em); }
+	li:nth-of-type(20):hover ~ .underbar, li:nth-of-type(20):focus ~ .underbar, li:nth-of-type(20):active ~ .underbar { left: calc(4em + 19*3.56em); }
+	li:nth-of-type(21):hover ~ .underbar, li:nth-of-type(21):focus ~ .underbar, li:nth-of-type(21):active ~ .underbar { left: calc(4em + 20*3.56em); }
+	li:nth-of-type(22):hover ~ .underbar, li:nth-of-type(22):focus ~ .underbar, li:nth-of-type(22):active ~ .underbar { left: calc(4em + 21*3.56em); }
+	li:nth-of-type(23):hover ~ .underbar, li:nth-of-type(23):focus ~ .underbar, li:nth-of-type(23):active ~ .underbar { left: calc(4em + 22*3.56em); }
+	li:nth-of-type(24):hover ~ .underbar, li:nth-of-type(24):focus ~ .underbar, li:nth-of-type(24):active ~ .underbar { left: calc(4em + 23*3.56em); }
+	li:nth-of-type(25):hover ~ .underbar, li:nth-of-type(25):focus ~ .underbar, li:nth-of-type(25):active ~ .underbar { left: calc(4em + 24*3.56em); }
+	li:nth-of-type(26):hover ~ .underbar, li:nth-of-type(26):focus ~ .underbar, li:nth-of-type(26):active ~ .underbar { left: calc(4em + 25*3.56em); }
+
+	
+	.button {
+		position:absolute;
+		width:45.75em;
+  		-webkit-transition: 0.3s ease;
+
+	}
+	
+	.button:hover {background:#D73276;}
+	
+	.button a {
+		display: inline-block; 
+		width:100%; 
+		height: 100%; 
+		text-align: center;
+		font: 1.6em Font-Bold;
+		letter-spacing: 0.1em;
+		padding:0.21em 1em 0.21em 0;
+		border-bottom:0.2em solid #FFFFFF;
+		color:#FFFFFF;
+		background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M 1 1 L 77 50 L 1 99 L 1 1 Z' fill='%23FFFFFF' /></svg>");
+		background-position: 98% 50%;
+		background-repeat: no-repeat;
+		background-size: auto 45% ;	
+	}
+	
+
+	.btn-artist {top:14.7em; left:4em;  background:#D73276; }
+	.btn-title {top:14.7em; right:4em;  background:#2D1A45; }
+	.btn-cancel {top:41.65em; left:4em; 	background:#D091D2; border-top:0.3em solid #FFFFFF;}
+	.btn-confirm {top:41.65em; right:4em; background:#D091D2; border-top:0.3em solid #FFFFFF;}
+
+
+	
+	.btn-title:hover ~ .btn-artist {background:#2D1A45;}
+	
+	
+	td { border-top: 2px solid #F7F7F7; width: 20%; padding: 0.2em 1em;}
+	.t1 { font-family: 'Font-Regular'; font-size: 1.6em; color: #68676B;}
+	
+	
+	
+/* custom-scroll ------------------------------------------------------ */ 	
+
+.custom-scroll::-webkit-scrollbar-button {
+  display: block;
+  width: 1em;
+  height: 3.0em;
+}    
+    
+.custom-scroll::-webkit-scrollbar-button:decrement:start {
+  background-color:#D091D2;
+	background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0,93.5l50-87l50,87H0z' fill='%23FFFFFF' /></svg>");
+	background-position: 50% 43%;
+	background-repeat: no-repeat;
+	background-size: auto 45% ;	
+}  
+
+	
+.custom-scroll::-webkit-scrollbar-button:decrement:hover {
+  background-color:#D73276;
+	}
+
+	
+.custom-scroll::-webkit-scrollbar-button:increment:end {
+  background-color:#D091D2;
+	background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M100,8.5l-50,87L0,8.5H100z' fill='%23FFFFFF' /></svg>");
+	background-position: 50% 59%;
+	background-repeat: no-repeat;
+	background-size: auto 45% ;	
+}   
+    
+.custom-scroll::-webkit-scrollbar-button:increment:hover {
+  background-color:#D73276;
+	}
+	
+.custom-scroll::-webkit-scrollbar-button:vertical:start:increment,
+.custom-scroll::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}   
+    
+.custom-scroll::-webkit-scrollbar-track-piece:vertical:start {
+    border-top: 0.5em solid #FFFFFF;
+	border-bottom: 1.5em solid #D091D2;
+	background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M0,0v20h100V0H0z' fill='%23FFFFFF' /></svg>");
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	background-size: 100% auto ;
+    }
+.custom-scroll::-webkit-scrollbar-track-piece:vertical:end {
+    border-top: 1.5em solid #D091D2;
+	border-bottom: 0.5em solid #FFFFFF;
+	background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M0,0v20h100V0H0z' fill='%23FFFFFF' /></svg>");
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+	background-size: 100% auto ;
+	}    
+
+.custom-scroll::-webkit-scrollbar {
+    margin-right: 0em;
+    margin-left: 0em;
+    background-color: #D091D2;
+    width: 3em;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+   display: none;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover { background: #999 }   
+    
+.custom-scroll {
+  width: 49.99%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.leftContainer {
+  float: left;
+    direction: rtl;
+}
+
+.rightContainer {
+  float: right;
+    direction: ltr;
+}
+
+
+	
+</style>
+	
+</head>
+	
+    
+    
+<body>
+	
+<div class="background">
+	
+	<div class="header"></div>
+	
+  	<div class="navContainer ">
+		<div class="alphabetBackground"></div>
+		<ul id="alphabet">
+			<li class="A"><a href="#" >A</a></li>
+			<li class="B"><a href="#" >B</a></li>
+			<li class="C"><a href="#" >C</a></li>
+			<li class="D"><a href="#" >D</a></li>
+			<li class="E"><a href="#" >E</a></li>
+			<li class="F"><a href="#" >F</a></li>
+			<li class="G"><a href="#" >G</a></li>
+			<li class="H"><a href="#" >H</a></li>
+			<li class="I"><a href="#" >I</a></li>
+			<li class="J"><a href="#" >J</a></li>
+			<li class="K"><a href="#" >K</a></li>
+			<li class="L"><a href="#" >L</a></li>
+			<li class="M"><a href="#" >M</a></li>
+			<li class="N"><a href="#" >N</a></li>
+			<li class="O"><a href="#" >O</a></li>
+			<li class="P"><a href="#" >P</a></li>
+			<li class="Q"><a href="#" >Q</a></li>
+			<li class="R"><a href="#" >R</a></li>
+			<li class="S"><a href="#" >S</a></li>
+			<li class="T"><a href="#" >T</a></li>
+			<li class="U"><a href="#" >U</a></li>
+			<li class="V"><a href="#" >V</a></li>
+			<li class="W"><a href="#" >W</a></li>
+			<li class="X"><a href="#" >X</a></li>
+			<li class="Y"><a href="#" >Y</a></li>
+			<li class="Z"><a href="#" >Z</a></li> 
+  			<li class="underbar"></li>
+		</ul>
+	</div>
+
+	<div class="middle">
+		
+		<div class="button btn-title upper">
+			<a>Title</a>
+		</div>
+		
+		<div class="button btn-artist upper">
+			<a>Artist</a>
+		</div>
+		
+		<div class="button btn-cancel upper">
+			<a>Cancel</a>
+		</div>
+		<div class="button btn-confirm upper">
+			<a>Confirm</a>
+		</div>
+		
+		
+		
+		
+	
+<div id="left" class="custom-scroll leftContainer">
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avalanche City</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Amy Shark</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Anne-Marie</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">Ariana Grande</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Avicii feat. Rita Ora</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Alae</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Alec Benjamin</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Ava Max</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="right" class="custom-scroll rightContainer">
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">All About You, Prayed For Love</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">I Said Hi</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">2002, Perfect To Me</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td3">
+        <p class="p2">God Is A Woman, No Tears Left To Cry</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Lonely Together</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">Help You Now</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td2">
+        <p class="p2">Let Me Down Slowly</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="td1">
+        <p class="p2">So Am I, Sweet But Psycho</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+ <script>
+var isSyncingLeftScroll = false;
+var isSyncingRightScroll = false;
+var leftDiv = document.getElementById('left');
+var rightDiv = document.getElementById('right');
+
+leftDiv.onscroll = function() {
+  if (!isSyncingLeftScroll) {
+    isSyncingRightScroll = true;
+    rightDiv.scrollTop = this.scrollTop;
+  }
+  isSyncingLeftScroll = false;
+}
+
+rightDiv.onscroll = function() {
+  if (!isSyncingRightScroll) {
+    isSyncingLeftScroll = true;
+    leftDiv.scrollTop = this.scrollTop;
+  }
+  isSyncingRightScroll = false;
+}
+    </script>   
+	
+		
+	</div>
+
+	
+	<div class="footer">
+		<div class="footer-text" >
+			<div class="number-animation"><p>1</p></div>
+			<div class="text-animation">Choose by ARTIST or TITLE</div>
+		</div>
+	</div>
+
+	
+</div>
+	
+</body>
+</html>
