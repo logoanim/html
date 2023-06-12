@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F2F2F2;}
+	.st1{fill:#D8D8D8;}
+</style>
+	
+	<defs>
+	  <mask id="Mask" >
+		<rect x="0" y="0" width="30" height="30" fill="white"  />
+		  
+		<path d="M 0 0 L 15 0 L 15 15 L 16 0 L 30 0 L 30 30 L 0 30 L 0 0 Z" fill-rule="nonzero" fill="#000000">
+		<animate 
+		 begin="0"
+		 dur="12s" 
+		 repeatCount="indefinite" 
+		 attributeName="d" 
+		 values="M  0  0 L 15  0 L 15 15 L 16  0 L 30  0 L 30 30 L  0 30 L  0  0 Z;
+		 		 M  0  0 L 15  0 L 15 15 L 30  0 L 30  0 L 30 30 L  0 30 L  0  0 Z;
+				 M  0  0 L 15  0 L 15 15 L 30 15 L 30 15 L 30 30 L  0 30 L  0  0 Z;
+				 M  0  0 L 15  0 L 15 15 L 30 30 L 30 30 L 30 30 L  0 30 L  0  0 Z;
+				 M  0  0 L 15  0 L 15 15 L 15 30 L 15 30 L 15 30 L  0 30 L  0  0 Z;
+				 M  0  0 L 15  0 L 15 15 L  0 30 L  0 30 L  0 30 L  0 30 L  0  0 Z:
+				 M  0  0 L 15  0 L 15 15 L  0 15 L  0 15 L  0 15 L  0 15 L  0  0 Z;
+				 M  0  0 L 15  0 L 15 15 L  0  0 L  0  0 L  0  0 L  0  0 L  0  0 Z;
+				 M 15  0 L 15  0 L 15 15 L 15  0 L 15  0 L 15  0 L 15  0 L 15  0 Z;
+				 
+				 M 30  0 L 30  0 L 15 15 L 15  0 L 30  0 L 30  0 L 30  0 L 30  0 Z;
+				 M 30 15 L 30 15 L 15 15 L 15  0 L 30  0 L 30 15 L 30 15 L 30 15 Z;
+				 M 30 30 L 30 30 L 15 15 L 15  0 L 30  0 L 30 30 L 30 30 L 30 30 Z;
+				 M 15 30 L 15 30 L 15 15 L 15  0 L 30  0 L 30 30 L 15 30 L 15 30 Z;
+				 M  0 30 L  0 30 L 15 15 L 15  0 L 30  0 L 30 30 L  0 30 L  0 30 Z;
+				 M  0 15 L  0 14 L 15 15 L 15  0 L 30  0 L 30 30 L  0 30 L  0 15 Z;
+				 M  0 0  L  0  0 L 15 15 L 15  0 L 30  0 L 30 30 L  0 30 L  0  0 Z;
+				 M  0 0  L 14  0 L 15 15 L 15  0 L 30  0 L 30 30 L  0 30 L  0  0 Z;" 
+		fill="freeze"
+		/>
+  </path>
+	  </mask>
+  </defs>
+	
+<g>
+	<path class="st0" d="M15,1.08C7.31,1.08,1.08,7.31,1.08,15S7.31,28.92,15,28.92S28.92,22.69,28.92,15S22.69,1.08,15,1.08z M15,25.9
+		C8.98,25.9,4.1,21.02,4.1,15S8.98,4.1,15,4.1S25.9,8.98,25.9,15S21.02,25.9,15,25.9z"/>
+	
+		<path class="st1" d="M15,1.08C7.31,1.08,1.08,7.31,1.08,15S7.31,28.92,15,28.92S28.92,22.69,28.92,15S22.69,1.08,15,1.08z M15,25.9
+		C8.98,25.9,4.1,21.02,4.1,15S8.98,4.1,15,4.1S25.9,8.98,25.9,15S21.02,25.9,15,25.9z" mask="url(#Mask)" />
+	
+	
+	<path class="st0" d="M10.66,9.47h3.14v11h-3.14V9.47z"/>
+	<path class="st0" d="M16.27,9.47h3.14v11h-3.14V9.47z"/>
+</g>
+</svg>
